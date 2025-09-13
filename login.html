@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="frontDashboard.css">
+</head>
+<body>
+    <div class="login-container">
+        <div id="login-card" class="card">
+            <h1>Login</h1>
+            <div id="notification" style="color: red; text-align: center; margin-bottom: 10px;"></div>
+            <div id="auth-options">
+                <button id="google-signin-btn" class="btn">
+                    Sign in with Google
+                </button>
+            </div>
+            <hr>
+            <div id="phone-auth-container">
+                <h2>Sign in with Phone</h2>
+                <input type="tel" id="phone-number" placeholder="Enter phone number" />
+                <button id="send-code-btn" class="btn">Send Code</button>
+                <div id="recaptcha-container"></div>
+                <br>
+                <input type="number" id="verification-code" placeholder="Enter verification code" style="display:none;"/>
+                <button id="verify-code-btn" class="btn" style="display:none;">Verify Code</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="login.js"></script>
+</body>
+</html>

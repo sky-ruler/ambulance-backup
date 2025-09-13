@@ -1,0 +1,236 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: #f3f6fb;
+  color: #1f2937;
+  padding: 20px;
+}
+
+/* Heading */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* Card container */
+.card {
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.card input,
+.card select,
+.card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.card input:focus,
+.card select:focus,
+.card textarea:focus {
+  border-color: #0ea5a3;
+  box-shadow: 0 0 0 3px rgba(14, 165, 163, 0.2);
+}
+
+/* Buttons */
+.card button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#useMyLocation {
+  background: #0ea5a3;
+  color: #fff;
+}
+
+#useMyLocation:hover {
+  background: #0d9488;
+}
+
+#useTypedLocation {
+  background: #3b82f6;
+  color: #fff;
+}
+
+#useTypedLocation:hover {
+  background: #2563eb;
+}
+
+#requestBtn {
+  background: #ef4444;
+  color: #fff;
+}
+
+#requestBtn:hover {
+  background: #dc2626;
+}
+
+.card button:hover {
+  opacity: 0.9;
+}
+
+/* Status Text */
+#statusArea {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+/* Suggestions Dropdown */
+#suggestions li {
+  background: #f9fafb;
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s;
+}
+
+#suggestions li:hover {
+  background: #e0f2fe;
+}
+
+/* Map */
+#map {
+  flex: 2;
+  height: 540px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  min-width: 400px; /* ensures it doesn't get too small */
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 10px 0 20px;
+  line-height: 1.2;
+  position: relative;
+}
+
+.title .icon {
+  font-size: 1.9rem;
+  margin: 0 4px;
+}
+
+.title .text {
+  background: linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef);
+  margin: 4px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(0, 183, 255, 0.6);
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.form-area {
+  flex: 1;
+  max-width: 380px;
+}
+
+.home-link {
+  display: inline-block;
+  padding: 8px 14px;
+  background: rgb(37, 181, 221);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.home-link:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(14,165,163,0.4);
+}
+
+.header-row {
+  display: flex;
+  align-items: center;  /* vertically center the items */
+  gap: 20px;            /* spacing between button and heading */
+  margin-bottom: 30px;
+  flex-wrap: wrap;      /* responsive for smaller screens */
+}
+
+.header-row .title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #0ea5a3;
+}
+
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  inset: 0; /* top:0, right:0, bottom:0, left:0 */
+  background-color: rgba(0,0,0,0.4); /* dark overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%; /* mobile responsive */
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  animation: slideDown 0.3s ease;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #0ea5a3;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

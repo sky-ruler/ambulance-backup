@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Driver Registration</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="ambulance_registration.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h2>🚑 Driver Registration</h2>
+      <label for="driverName">Driver Name</label>
+      <input id="driverName" placeholder="Driver Name" />
+      <label for="ambulancePlate">Ambulance Plate</label>
+      <input id="ambulancePlate" placeholder="e.g., OD-02-1234" />
+      <label for="hospitalSelect">Select Hospital</label>
+      <select id="hospitalSelect">
+        <option value="">-- Municipal Ambulance (No Hospital) --</option>
+      </select>
+      <button id="registerBtn">Register</button>
+      <div id="status"></div>
+    </div>
+    <script type="module" src="ambulance_registration.js"></script>
+  </body>
+</html>

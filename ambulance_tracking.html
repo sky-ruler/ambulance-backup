@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>🚑 Ambulance Tracking</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="ambulance_tracking.css"/>
+  </head>
+  <body>
+    <h2>🚑 Ambulance Tracking</h2>
+    <div class="main-container">
+      <div id="map"></div>
+    
+      <div class="side-panel">
+        <div id="info">No active requests.</div>
+        <button id="pickupBtn" class="btn btn-primary" style="display: none;">✅ Patient Picked Up</button>
+        <button id="completeBtn" class="btn btn-success" style="display: none;">🏁 Complete Trip</button>
+      </div>
+    </div>
+    
+    <div id="popup">
+      <div id="popupBox">
+        <h3>🚨 New Request</h3>
+        <p id="popupText"></p>
+        <button id="acceptBtn">Accept</button>
+        <button id="rejectBtn">Reject</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type="module" src="ambulance_tracking.js"></script>
+  </body>
+</html>

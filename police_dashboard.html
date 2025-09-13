@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Police Dashboard</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="police_dashboard.css" />
+  </head>
+  <body>
+    <header>🚓 Traffic Police Dashboard</header>
+
+    <div class="container">
+      <div id="map"></div>
+      <div class="sidebar">
+        <h3>Ambulance Requests</h3>
+        <table id="requestsTable">
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Hospital</th>
+              <th>Ambulance Plate</th>
+              <th>Driver</th>
+              <th>Priority</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script type="module" src="police_dashboard.js"></script>
+  </body>
+</html>

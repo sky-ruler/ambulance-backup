@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hospital — Request Ambulance</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="hospital.css" />
+  </head>
+  <body>
+    <h1>Hospital — Request Ambulance</h1>
+
+    <div class="container">
+      <div class="card form-area">
+        <input id="hospitalId" placeholder="Enter Your Hospital Name" />
+        <ul id="hospitalSuggestions"></ul>
+
+        <input id="patientName" placeholder="Patient's Full Name" />
+        <div class="address-search-container">
+          <input
+            id="pickupSearch"
+            placeholder="Enter pickup address or pincode"
+            autocomplete="off"
+          />
+          <button id="searchAddressBtn">Search</button>
+        </div>
+        <ul id="suggestions"></ul>
+
+        <button id="useMyLocation">Use My Current Location</button>
+
+        <select id="priority">
+          <option value="normal">Normal Priority</option>
+          <option value="urgent">Urgent</option>
+          <option value="critical">Critical</option>
+        </select>
+
+        <textarea id="notes" placeholder="Additional notes (e.g., patient condition)"></textarea>
+        
+        <div id="loadingIndicator" style="display: none;">Loading...</div>
+
+        <button id="requestBtn">Request Ambulance</button>
+        <button id="emergencyBtn" class="emergency">
+          🚨 Emergency Booking
+        </button>
+        <div id="statusArea" class="small">Complete the form to enable requests.</div>
+      </div>
+
+      <div id="map"></div>
+    </div>
+    
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Request Successful</h2>
+        <p>Your ambulance request has been submitted and the nearest ambulance is on its way.</p>
+        <p>You can track the ambulance on the map.</p>
+      </div>
+    </div>
+
+    <script type="module" src="hospital_order.js"></script>
+  </body>
+</html>
